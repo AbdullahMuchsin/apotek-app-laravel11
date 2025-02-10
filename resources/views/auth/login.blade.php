@@ -1,10 +1,10 @@
 <x-guest-layout>
-    <div class="flex space-x-10">
-        <div class="flex justify-center align-middle w-1/2 ">
-            <img src="{{ asset('storage/img/mypotek.png') }}" class="rounded" alt="">
+    <div class="flex flex-col align-middle justify-center border">
+        <div class="w-1/5 mb-4 mx-auto rounded-full overflow-hidden">
+            <img src="{{ asset('storage/img/mypotek.png') }}" class="rounded-full" alt="">
         </div>
 
-        <div class="w-1/2">
+        <div class="w-1/4 mx-auto">
             <h1 class="text-gray-900 text-3xl font-semibold">LOGIN</h1>
             <!-- Session Status -->
             <x-auth-session-status class="mb-4" :status="session('status')" />
