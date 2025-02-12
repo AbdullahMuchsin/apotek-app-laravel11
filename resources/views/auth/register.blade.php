@@ -1,19 +1,15 @@
 <x-guest-layout>
-    <div class="flex space-x-10">
-        <div class="flex justify-center align-middle w-1/2 ">
-            <img src="{{ asset('storage/img/mypotek.png') }}" class="rounded" alt="">
-        </div>
-
-        <div class="w-1/2">
-            <h1 class="text-gray-900 text-3xl font-semibold">REGISTER</h1>
+    <div class="border border-gray-700 px-6 py-5 w-2/6 mx-auto rounded-md">
+        <div class="mx-auto">
+            <h1 class="text-gray-900 text-3xl font-semibold text-center py-5">REGISTER HERE</h1>
             <form method="POST" action="{{ route('register') }}" class="mt-5">
                 @csrf
 
                 <!-- Name -->
                 <div>
                     <x-input-label for="name" :value="__('Name')" />
-                    <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
-                        :value="old('name')" required autofocus autocomplete="name" />
+                    <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
+                        required autofocus autocomplete="name" />
                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 </div>
 
@@ -57,5 +53,6 @@
                 </div>
             </form>
         </div>
+
     </div>
 </x-guest-layout>
